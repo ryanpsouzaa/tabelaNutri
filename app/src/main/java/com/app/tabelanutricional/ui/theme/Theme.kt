@@ -10,6 +10,7 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.dp
 
 private val LightColorScheme = lightColorScheme(
     primary = Primary,
@@ -41,6 +42,7 @@ fun TabelaNutricionalTheme(
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
+    val sizing = if (darkTheme) Sizing(sm = 56.dp) else sizing
     val colorScheme = when {
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
             val context = LocalContext.current
@@ -56,16 +58,15 @@ fun TabelaNutricionalTheme(
         typography = Typography,
         content = {
             CompositionLocalProvider(
-                LocalSizing provides sizing
+                LocalSizing provides(sizing)
             ) {
-                content
+                content()
             }
-
         }
     )
 }
 
-object TabelaNutricionalTheme{
+object TabelaNutricionalTheme {
     val sizing: Sizing
         @Composable
         get() = LocalSizing.current

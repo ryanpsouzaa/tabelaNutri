@@ -18,6 +18,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.app.tabelanutricional.R
 import com.app.tabelanutricional.ui.theme.Background
+import com.app.tabelanutricional.ui.theme.TabelaNutricionalTheme
 import kotlinx.coroutines.delay
 
 @Composable
@@ -57,5 +58,7 @@ fun BackButton(modifier: Modifier= Modifier, onClick: () -> Unit) {
 @Preview
 @Composable
 private fun BackButtonPreview() {
-    BackButton{ }
+    TabelaNutricionalTheme {
+        BackButton{ }
+    }
 }

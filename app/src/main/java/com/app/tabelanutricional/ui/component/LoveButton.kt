@@ -64,5 +64,7 @@ fun LoveButton(modifier: Modifier = Modifier, onClick: (isSelected: Boolean) -> 
 @Preview
 @Composable
 private fun LoveButtonPreview() {
-    LoveButton{ }
+    TabelaNutricionalTheme{
+        LoveButton{ }
+    }
 }
