@@ -17,4 +17,6 @@
     <string name="tempo_leitura_da_noticia">%1$d MIN</string>
     <string name="welcome_heading_seja_bem_vindo">Seja bem vindo de volta!</string>
     <string name="welcome_heading_ola_nome_user">Olá %1$s!</string>
+    <string name="energia">Energia</string>
+    <string name="porcao_total">Porção total</string>
 </resources>
