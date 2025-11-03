@@ -29,14 +29,9 @@ import com.app.tabelanutricional.R
 import com.app.tabelanutricional.ui.theme.TabelaNutricionalTheme
 import com.app.tabelanutricional.ui.theme.TabelaNutricionalTheme.sizing
 import com.app.tabelanutricional.ui.theme.Typography
+import java.util.UUID
 
-data class HealthyRecipe(
-    val title: String,
-    @DrawableRes val imageRes: Int,
-    val calories: Float,
-    val proteins: Float,
-    val carbohydrates: Float
-)
+
 
 @Composable
 fun HealthyRecipeCard(

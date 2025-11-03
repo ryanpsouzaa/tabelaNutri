@@ -19,4 +19,6 @@
     <string name="welcome_heading_ola_nome_user">Olá %1$s!</string>
     <string name="energia">Energia</string>
     <string name="porcao_total">Porção total</string>
+    <string name="valor_com_unidade_recipe_details">%1$s %2$s</string>
+    <string name="saude_em_foco">Saúde em foco</string>
 </resources>

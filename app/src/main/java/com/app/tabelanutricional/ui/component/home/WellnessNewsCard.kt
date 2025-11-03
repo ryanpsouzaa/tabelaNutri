@@ -29,21 +29,11 @@ import com.app.tabelanutricional.R
 import com.app.tabelanutricional.ui.theme.TabelaNutricionalTheme
 import com.app.tabelanutricional.ui.theme.TabelaNutricionalTheme.sizing
 import com.app.tabelanutricional.ui.theme.Typography
+import java.util.UUID
 
-enum class WellnessNewsTag(
-    val description: String
-){
-    WELLNESS(description = "Bem-estar"),
-    NUTRITION(description = "Nutrição"),
-    FOOD_EDUCATION(description = "Educação alimentar")
-}
 
-data class WellnessNews(
-    val title: String,
-    @DrawableRes val imageRes: Int,
-    val readTimeInMinutes: Int,
-    val tags: List<WellnessNewsTag>
-)
+
+
 
 @Composable
 fun WellnessNewsCard(

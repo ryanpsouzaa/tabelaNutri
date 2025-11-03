@@ -1,6 +1,5 @@
 package com.app.tabelanutricional.ui.component
 
-import android.R.attr.onClick
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -9,9 +8,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -21,11 +18,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.app.tabelanutricional.R
-import com.app.tabelanutricional.R.*
 import com.app.tabelanutricional.ui.theme.Background
 import com.app.tabelanutricional.ui.theme.Secondary
 import com.app.tabelanutricional.ui.theme.TabelaNutricionalTheme
-import kotlinx.coroutines.delay
 
 @Composable
 fun LoveButton(modifier: Modifier = Modifier, onClick: (isSelected: Boolean) -> Unit) {
