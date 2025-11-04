@@ -42,7 +42,7 @@ fun TabelaNutricionalTheme(
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
-    val sizing = if (darkTheme) Sizing(sm = 56.dp) else sizing
+    //val sizing = if (darkTheme) Sizing(sm = 56.dp) else sizing
     val colorScheme = when {
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
             val context = LocalContext.current

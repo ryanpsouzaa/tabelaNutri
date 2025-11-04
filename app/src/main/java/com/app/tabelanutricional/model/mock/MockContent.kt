@@ -2,9 +2,8 @@ package com.app.tabelanutricional.model.mock
 
 import com.app.tabelanutricional.R
 import com.app.tabelanutricional.model.HealthyRecipe
-import com.app.tabelanutricional.ui.component.home.HealthyRecipe
-import com.app.tabelanutricional.ui.component.home.WellnessNews
-import com.app.tabelanutricional.ui.component.home.WellnessNewsTag
+import com.app.tabelanutricional.model.WellnessNews
+import com.app.tabelanutricional.model.WellnessNewsTag
 
 val mockWellnessNews = listOf(
     WellnessNews(
@@ -40,41 +39,59 @@ val mockHealthyRecipes = listOf(
         imageRes = R.drawable.img_assorted_salad,
         calories = 221.15f,
         proteins = 15.13f,
-        carbohydrates = 18.40f
+        carbohydrates = 18.40f,
+        totalPortion = 240,
+        sugar = 4.88f,
+        fat = 5.18f
     ),
     HealthyRecipe(
         title = "Frango grelhado",
         imageRes = R.drawable.img_grilled_chicken,
         calories = 320.45f,
         proteins = 30.25f,
-        carbohydrates = 22.80f
+        carbohydrates = 22.80f,
+        totalPortion = 240,
+        sugar = 4.88f,
+        fat = 5.18f
     ),
     HealthyRecipe(
         title = "Omelete de queijo e espinafre",
         imageRes = R.drawable.img_cheese_and_spinach_omelette,
         calories = 280.10f,
         proteins = 20.50f,
-        carbohydrates = 10.30f
+        carbohydrates = 10.30f,
+        totalPortion = 240,
+        sugar = 4.88f,
+        fat = 5.18f
     ),
     HealthyRecipe(
         title = "Panqueca de aveia e banana",
         imageRes = R.drawable.img_oatmeal_and_banana_pancakes,
         calories = 250.60f,
         proteins = 8.75f,
-        carbohydrates = 4.20f
+        carbohydrates = 4.20f,
+        totalPortion = 240,
+        sugar = 4.88f,
+        fat = 5.18f
     ),
     HealthyRecipe(
         title = "Tofu grelhado",
         imageRes = R.drawable.img_grilled_tofu,
         calories = 221.15f,
         proteins = 15.13f,
-        carbohydrates = 18.40f
+        carbohydrates = 18.40f,
+        totalPortion = 240,
+        sugar = 4.88f,
+        fat = 5.18f
     ),
     HealthyRecipe(
         title = "Iogurte natural com granola",
         imageRes = R.drawable.img_natural_yogurt_with_granola,
         calories = 190.30f,
         proteins = 12.10f,
-        carbohydrates = 30.15f
+        carbohydrates = 30.15f,
+        totalPortion = 240,
+        sugar = 4.88f,
+        fat = 5.18f
     )
 )

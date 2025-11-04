@@ -21,4 +21,8 @@
     <string name="porcao_total">Porção total</string>
     <string name="valor_com_unidade_recipe_details">%1$s %2$s</string>
     <string name="saude_em_foco">Saúde em foco</string>
+    <string name="acucar">Açúcar</string>
+    <string name="carboidratos">Carboidratos</string>
+    <string name="proteinas">Proteínas</string>
+    <string name="gorduras">Gorduras</string>
 </resources>

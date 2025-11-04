@@ -26,6 +26,8 @@ import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.app.tabelanutricional.R
+import com.app.tabelanutricional.model.WellnessNews
+import com.app.tabelanutricional.model.WellnessNewsTag
 import com.app.tabelanutricional.ui.theme.TabelaNutricionalTheme
 import com.app.tabelanutricional.ui.theme.TabelaNutricionalTheme.sizing
 import com.app.tabelanutricional.ui.theme.Typography

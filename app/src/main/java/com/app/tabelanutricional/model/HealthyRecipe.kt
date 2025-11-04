@@ -9,5 +9,8 @@ data class HealthyRecipe(
     @DrawableRes val imageRes: Int,
     val calories: Float,
     val proteins: Float,
-    val carbohydrates: Float
+    val carbohydrates: Float,
+    val totalPortion: Int,
+    val sugar: Float,
+    val fat: Float
 )

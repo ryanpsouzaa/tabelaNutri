@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import com.app.tabelanutricional.R
 import com.app.tabelanutricional.ui.theme.TabelaNutricionalTheme
@@ -31,8 +32,9 @@ fun HealthyRecipeMainInfo(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-           text = name,
-            style = Typography.headlineMedium
+            text = name,
+            textAlign = TextAlign.Center,
+            style = Typography.headlineLarge
         )
         Spacer(modifier = Modifier.height(sizing.lg))
         Row(

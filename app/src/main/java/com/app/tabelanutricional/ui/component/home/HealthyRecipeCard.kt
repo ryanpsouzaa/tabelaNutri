@@ -26,6 +26,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.app.tabelanutricional.R
+import com.app.tabelanutricional.model.HealthyRecipe
 import com.app.tabelanutricional.ui.theme.TabelaNutricionalTheme
 import com.app.tabelanutricional.ui.theme.TabelaNutricionalTheme.sizing
 import com.app.tabelanutricional.ui.theme.Typography
@@ -36,7 +37,8 @@ import java.util.UUID
 @Composable
 fun HealthyRecipeCard(
     modifier: Modifier = Modifier,
-    healthyRecipe: HealthyRecipe) {
+    healthyRecipe: HealthyRecipe
+) {
 
     Row(
         modifier = modifier.fillMaxWidth(),
@@ -103,7 +105,11 @@ private fun HealthyRecipeCardPreview() {
                         imageRes = R.drawable.img_assorted_salad,
                         calories = 221.15f,
                         proteins = 15.13f,
-                        carbohydrates = 18.40f
+                        carbohydrates = 18.40f,
+                        totalPortion = 240,
+                        sugar = 2.4f,
+                        fat = 2.4f
+
                     )
                 )
             }
