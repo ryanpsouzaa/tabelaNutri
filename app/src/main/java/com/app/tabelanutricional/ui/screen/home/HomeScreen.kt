@@ -31,7 +31,10 @@ import com.app.tabelanutricional.ui.theme.TabelaNutricionalTheme.sizing
 import com.app.tabelanutricional.ui.theme.Typography
 
 @Composable
-fun HomeScreen(modifier: Modifier = Modifier) {
+fun HomeScreen(
+    modifier: Modifier = Modifier,
+    onNavigateToDetails: (selectedHealthyRecipeId: String) -> Unit
+) {
     Column(modifier = modifier.fillMaxSize()) {
 
         Column(modifier = Modifier.padding(sizing.md)) {
@@ -60,7 +63,10 @@ fun HomeScreen(modifier: Modifier = Modifier) {
 
                 Spacer(modifier = Modifier.height(sizing.lg))
 
-                HealthyRecipeList(healthyRecipes = mockHealthyRecipes)
+                HealthyRecipeList(
+                    healthyRecipes = mockHealthyRecipes,
+                    onNavigateToDetails = onNavigateToDetails
+                )
             }
         }
     }
@@ -90,7 +96,8 @@ fun WellnessNewsList(
 @Composable
 fun HealthyRecipeList(
     modifier: Modifier = Modifier,
-    healthyRecipes: List<HealthyRecipe>
+    healthyRecipes: List<HealthyRecipe>,
+    onNavigateToDetails: (selectedHealthyRecipeId: String) -> Unit
     ) {
     LazyColumn(
         modifier = modifier,
@@ -100,7 +107,10 @@ fun HealthyRecipeList(
             items = healthyRecipes, key = { healthyRecipe -> healthyRecipe.id}) {
                 healthyRecipe ->
             HealthyRecipeCard(
-                healthyRecipe = healthyRecipe
+                healthyRecipe = healthyRecipe,
+                onClick = { selectedHealthyRecipeId ->
+                    onNavigateToDetails(selectedHealthyRecipeId)
+                }
             )
         }
     }
@@ -112,6 +122,6 @@ fun HealthyRecipeList(
 @Composable
 private fun HomeScreenPreview() {
     TabelaNutricionalTheme {
-        HomeScreen()
+        HomeScreen(onNavigateToDetails = {})
     }
 }

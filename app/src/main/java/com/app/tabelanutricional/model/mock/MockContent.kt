@@ -2,6 +2,8 @@ package com.app.tabelanutricional.model.mock
 
 import com.app.tabelanutricional.R
 import com.app.tabelanutricional.model.HealthyRecipe
+import com.app.tabelanutricional.model.HealthyRecipeNutrient
+import com.app.tabelanutricional.model.NutrientUnit
 import com.app.tabelanutricional.model.WellnessNews
 import com.app.tabelanutricional.model.WellnessNewsTag
 
@@ -33,65 +35,368 @@ val mockWellnessNews = listOf(
     )
 )
 
+private val referenceRecipe = HealthyRecipe(
+    name = "Salada variada",
+    imageRes = R.drawable.img_assorted_salad,
+    calories = HealthyRecipeNutrient(
+        value = 221.15f,
+        unit = NutrientUnit.KCAL,
+        nameRes = R.string.energia
+    ),
+    proteins = HealthyRecipeNutrient(
+        value = 15.13f,
+        unit = NutrientUnit.GRAM,
+        nameRes = R.string.proteinas
+    ),
+    carbohydrates = HealthyRecipeNutrient(
+        value = 18.40f,
+        unit = NutrientUnit.GRAM,
+        nameRes = R.string.carboidratos
+    ),
+    sugar = HealthyRecipeNutrient(
+        value = 4.88f,
+        unit = NutrientUnit.GRAM,
+        nameRes = R.string.acucar
+    ),
+    fat = HealthyRecipeNutrient(
+        value = 5.18f,
+        unit = NutrientUnit.GRAM,
+        nameRes = R.string.gorduras
+    ),
+    fiber = HealthyRecipeNutrient(
+        value = 5.83f,
+        unit = NutrientUnit.GRAM,
+        nameRes = R.string.fibra_alimentar
+    ),
+    saturatedFat = HealthyRecipeNutrient(
+        value = 0.86f,
+        unit = NutrientUnit.GRAM,
+        nameRes = R.string.gorduras_saturadas
+    ),
+    transFat = HealthyRecipeNutrient(
+        value = 0.00f,
+        unit = NutrientUnit.GRAM,
+        nameRes = R.string.gorduras_trans
+    ),
+    cholesterol = HealthyRecipeNutrient(
+        value = 0.00f,
+        unit = NutrientUnit.MILLIGRAM,
+        nameRes = R.string.colesterol
+    ),
+    sodium = HealthyRecipeNutrient(
+        value = 243.03f,
+        unit = NutrientUnit.MILLIGRAM,
+        nameRes = R.string.sodio
+    ),
+    potassium = HealthyRecipeNutrient(
+        value = 291.85f,
+        unit = NutrientUnit.MILLIGRAM,
+        nameRes = R.string.potassio
+    ),
+    calcium = HealthyRecipeNutrient(
+        value = 49.02f,
+        unit = NutrientUnit.MILLIGRAM,
+        nameRes = R.string.calcio
+    ),
+    iron = HealthyRecipeNutrient(
+        value = 2.91f,
+        unit = NutrientUnit.MILLIGRAM,
+        nameRes = R.string.ferro
+    ),
+    magnesium = HealthyRecipeNutrient(
+        value = 48.23f,
+        unit = NutrientUnit.MILLIGRAM,
+        nameRes = R.string.magnesio
+    ),
+    vitaminC = HealthyRecipeNutrient(
+        value = 29.49f,
+        unit = NutrientUnit.MILLIGRAM,
+        nameRes = R.string.vitamina_c
+    ),
+    vitaminD = HealthyRecipeNutrient(
+        value = 24.88f,
+        unit = NutrientUnit.MILLIGRAM,
+        nameRes = R.string.vitamina_d
+    ),
+    vitaminB6 = HealthyRecipeNutrient(
+        value = 32.40f,
+        unit = NutrientUnit.MILLIGRAM,
+        nameRes = R.string.vitamina_b6
+    ),
+    totalPortionInGrams = 240,
+    totalFat = HealthyRecipeNutrient(
+        value = 5.18f,
+        unit = NutrientUnit.GRAM,
+        nameRes = R.string.gorduras_totais
+    )
+)
+
 val mockHealthyRecipes = listOf(
     HealthyRecipe(
-        title = "Salada variada",
+        name = "Salada variada",
         imageRes = R.drawable.img_assorted_salad,
-        calories = 221.15f,
-        proteins = 15.13f,
-        carbohydrates = 18.40f,
-        totalPortion = 240,
-        sugar = 4.88f,
-        fat = 5.18f
+        calories = HealthyRecipeNutrient(
+            value = 221.15f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.energia
+        ),
+        proteins = HealthyRecipeNutrient(
+            value = 15.13f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.proteinas
+        ),
+        carbohydrates = HealthyRecipeNutrient(
+            value = 18.40f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.carboidratos
+        ),
+        sugar = HealthyRecipeNutrient(
+            value = 4.88f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.acucar
+        ),
+        fat = HealthyRecipeNutrient(
+            value = 5.18f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.gorduras
+        ),
+        fiber = HealthyRecipeNutrient(
+            value = 5.83f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.fibra_alimentar
+        ),
+        saturatedFat = HealthyRecipeNutrient(
+            value = 0.86f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.gorduras_saturadas
+        ),
+        transFat = HealthyRecipeNutrient(
+            value = 0.00f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.gorduras_trans
+        ),
+        cholesterol = HealthyRecipeNutrient(
+            value = 0.00f,
+            unit = NutrientUnit.MILLIGRAM,
+            nameRes = R.string.colesterol
+        ),
+        sodium = HealthyRecipeNutrient(
+            value = 243.03f,
+            unit = NutrientUnit.MILLIGRAM,
+            nameRes = R.string.sodio
+        ),
+        potassium = HealthyRecipeNutrient(
+            value = 291.85f,
+            unit = NutrientUnit.MILLIGRAM,
+            nameRes = R.string.potassio
+        ),
+        calcium = HealthyRecipeNutrient(
+            value = 49.02f,
+            unit = NutrientUnit.MILLIGRAM,
+            nameRes = R.string.calcio
+        ),
+        iron = HealthyRecipeNutrient(
+            value = 2.91f,
+            unit = NutrientUnit.MILLIGRAM,
+            nameRes = R.string.ferro
+        ),
+        magnesium = HealthyRecipeNutrient(
+            value = 48.23f,
+            unit = NutrientUnit.MILLIGRAM,
+            nameRes = R.string.magnesio
+        ),
+        vitaminC = HealthyRecipeNutrient(
+            value = 29.49f,
+            unit = NutrientUnit.MILLIGRAM,
+            nameRes = R.string.vitamina_c
+        ),
+        vitaminD = HealthyRecipeNutrient(
+            value = 24.88f,
+            unit = NutrientUnit.MILLIGRAM,
+            nameRes = R.string.vitamina_d
+        ),
+        vitaminB6 = HealthyRecipeNutrient(
+            value = 32.40f,
+            unit = NutrientUnit.MILLIGRAM,
+            nameRes = R.string.vitamina_b6
+        ),
+        totalPortionInGrams = 240,
+        totalFat = HealthyRecipeNutrient(
+            value = 5.18f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.gorduras_totais
+        )
     ),
     HealthyRecipe(
-        title = "Frango grelhado",
-        imageRes = R.drawable.img_grilled_chicken,
-        calories = 320.45f,
-        proteins = 30.25f,
-        carbohydrates = 22.80f,
-        totalPortion = 240,
-        sugar = 4.88f,
-        fat = 5.18f
-    ),
-    HealthyRecipe(
-        title = "Omelete de queijo e espinafre",
+        name = "Omelete de queijo e espinafre",
         imageRes = R.drawable.img_cheese_and_spinach_omelette,
-        calories = 280.10f,
-        proteins = 20.50f,
-        carbohydrates = 10.30f,
-        totalPortion = 240,
-        sugar = 4.88f,
-        fat = 5.18f
+        calories = HealthyRecipeNutrient(
+            value = 280.10f,
+            unit = NutrientUnit.KCAL,
+            nameRes = R.string.energia
+        ),
+        proteins = HealthyRecipeNutrient(
+            value = 20.50f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.proteinas
+        ),
+        carbohydrates = HealthyRecipeNutrient(
+            value = 10.30f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.carboidratos
+        ),
+        sugar = HealthyRecipeNutrient(
+            value = 4.88f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.acucar
+        ),
+        fat = HealthyRecipeNutrient(
+            value = 5.18f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.gorduras
+        ),
+        fiber = referenceRecipe.fiber,
+        saturatedFat = referenceRecipe.saturatedFat,
+        transFat = referenceRecipe.transFat,
+        cholesterol = referenceRecipe.cholesterol,
+        sodium = referenceRecipe.sodium,
+        potassium = referenceRecipe.potassium,
+        calcium = referenceRecipe.calcium,
+        iron = referenceRecipe.iron,
+        magnesium = referenceRecipe.magnesium,
+        vitaminC = referenceRecipe.vitaminC,
+        vitaminD = referenceRecipe.vitaminD,
+        vitaminB6 = referenceRecipe.vitaminB6,
+        totalPortionInGrams = 240,
+        totalFat = referenceRecipe.totalFat
     ),
     HealthyRecipe(
-        title = "Panqueca de aveia e banana",
+        name = "Panqueca de aveia e banana",
         imageRes = R.drawable.img_oatmeal_and_banana_pancakes,
-        calories = 250.60f,
-        proteins = 8.75f,
-        carbohydrates = 4.20f,
-        totalPortion = 240,
-        sugar = 4.88f,
-        fat = 5.18f
+        calories = HealthyRecipeNutrient(
+            value = 250.60f,
+            unit = NutrientUnit.KCAL,
+            nameRes = R.string.energia
+        ),
+        proteins = HealthyRecipeNutrient(
+            value = 8.75f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.proteinas
+        ),
+        carbohydrates = HealthyRecipeNutrient(
+            value = 4.20f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.carboidratos
+        ),
+        sugar = HealthyRecipeNutrient(
+            value = 4.88f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.acucar
+        ),
+        fat = HealthyRecipeNutrient(
+            value = 5.18f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.gorduras
+        ),
+        fiber = referenceRecipe.fiber,
+        saturatedFat = referenceRecipe.saturatedFat,
+        transFat = referenceRecipe.transFat,
+        cholesterol = referenceRecipe.cholesterol,
+        sodium = referenceRecipe.sodium,
+        potassium = referenceRecipe.potassium,
+        calcium = referenceRecipe.calcium,
+        iron = referenceRecipe.iron,
+        magnesium = referenceRecipe.magnesium,
+        vitaminC = referenceRecipe.vitaminC,
+        vitaminD = referenceRecipe.vitaminD,
+        vitaminB6 = referenceRecipe.vitaminB6,
+        totalPortionInGrams = 240,
+        totalFat = referenceRecipe.totalFat
     ),
     HealthyRecipe(
-        title = "Tofu grelhado",
+        name = "Tofu grelhado",
         imageRes = R.drawable.img_grilled_tofu,
-        calories = 221.15f,
-        proteins = 15.13f,
-        carbohydrates = 18.40f,
-        totalPortion = 240,
-        sugar = 4.88f,
-        fat = 5.18f
+        calories = HealthyRecipeNutrient(
+            value = 221.15f,
+            unit = NutrientUnit.KCAL,
+            nameRes = R.string.energia
+        ),
+        proteins = HealthyRecipeNutrient(
+            value = 15.13f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.proteinas
+        ),
+        carbohydrates = HealthyRecipeNutrient(
+            value = 18.40f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.carboidratos
+        ),
+        sugar = HealthyRecipeNutrient(
+            value = 4.88f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.acucar
+        ),
+        fat = HealthyRecipeNutrient(
+            value = 5.18f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.gorduras
+        ),
+        fiber = referenceRecipe.fiber,
+        saturatedFat = referenceRecipe.saturatedFat,
+        transFat = referenceRecipe.transFat,
+        cholesterol = referenceRecipe.cholesterol,
+        sodium = referenceRecipe.sodium,
+        potassium = referenceRecipe.potassium,
+        calcium = referenceRecipe.calcium,
+        iron = referenceRecipe.iron,
+        magnesium = referenceRecipe.magnesium,
+        vitaminC = referenceRecipe.vitaminC,
+        vitaminD = referenceRecipe.vitaminD,
+        vitaminB6 = referenceRecipe.vitaminB6,
+        totalPortionInGrams = 240,
+        totalFat = referenceRecipe.totalFat
     ),
     HealthyRecipe(
-        title = "Iogurte natural com granola",
+        name = "Iogurte natural com granola",
         imageRes = R.drawable.img_natural_yogurt_with_granola,
-        calories = 190.30f,
-        proteins = 12.10f,
-        carbohydrates = 30.15f,
-        totalPortion = 240,
-        sugar = 4.88f,
-        fat = 5.18f
+        calories = HealthyRecipeNutrient(
+            value = 190.30f,
+            unit = NutrientUnit.KCAL,
+            nameRes = R.string.energia
+        ),
+        proteins = HealthyRecipeNutrient(
+            value = 12.10f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.proteinas
+        ),
+        carbohydrates = HealthyRecipeNutrient(
+            value = 30.15f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.carboidratos
+        ),
+        sugar = HealthyRecipeNutrient(
+            value = 4.88f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.acucar
+        ),
+        fat = HealthyRecipeNutrient(
+            value = 5.18f,
+            unit = NutrientUnit.GRAM,
+            nameRes = R.string.gorduras
+        ),
+        fiber = referenceRecipe.fiber,
+        saturatedFat = referenceRecipe.saturatedFat,
+        transFat = referenceRecipe.transFat,
+        cholesterol = referenceRecipe.cholesterol,
+        sodium = referenceRecipe.sodium,
+        potassium = referenceRecipe.potassium,
+        calcium = referenceRecipe.calcium,
+        iron = referenceRecipe.iron,
+        magnesium = referenceRecipe.magnesium,
+        vitaminC = referenceRecipe.vitaminC,
+        vitaminD = referenceRecipe.vitaminD,
+        vitaminB6 = referenceRecipe.vitaminB6,
+        totalPortionInGrams = 240,
+        totalFat = referenceRecipe.totalFat
     )
 )

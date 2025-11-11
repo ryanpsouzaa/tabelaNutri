@@ -12,7 +12,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.app.tabelanutricional.R
-import com.app.tabelanutricional.model.NutrientUnit
+import com.app.tabelanutricional.model.HealthyRecipeNutrient
+import com.app.tabelanutricional.model.mock.mockHealthyRecipes
 import com.app.tabelanutricional.ui.theme.TabelaNutricionalTheme
 import com.app.tabelanutricional.ui.theme.TabelaNutricionalTheme.sizing
 import com.app.tabelanutricional.ui.theme.Typography
@@ -20,10 +21,8 @@ import com.app.tabelanutricional.ui.theme.Typography
 @Composable
 fun HealthyRecipeNutrientsInfo(
     modifier: Modifier = Modifier,
-    name: String,
-    value: Float,
     isSubNutrient: Boolean = false,
-    unit: NutrientUnit
+    nutrient: HealthyRecipeNutrient
     ) {
     Row(
         modifier = modifier,
@@ -34,11 +33,11 @@ fun HealthyRecipeNutrientsInfo(
             modifier = modifier
                 .weight(1f)
                 .padding(start = if(isSubNutrient) sizing.md else sizing.x0),
-            text = name,
+            text = stringResource(id = nutrient.nameRes),
             style = if(isSubNutrient) Typography.bodyMedium else Typography.headlineSmall,
             )
         Text(
-            text = stringResource(R.string.valor_com_unidade_recipe_details, value, unit.symbol),
+            text = stringResource(R.string.valor_com_unidade_recipe_details, nutrient.value, nutrient.unit.symbol),
             style = Typography.bodyMedium)
     }
 }
@@ -50,16 +49,12 @@ private fun HealthyRecipeNutrientsInfoPreview() {
         Column {
             HealthyRecipeNutrientsInfo(
                 modifier = Modifier.padding(16.dp),
-                name = "Energia",
-                value = 221.15f,
-                unit = NutrientUnit.KCAL
+                nutrient = mockHealthyRecipes.first().calories
             )
 
             HealthyRecipeNutrientsInfo(
                 modifier = Modifier.padding(horizontal = 16.dp).padding(bottom = 16.dp),
-                name = "Fibra Alimentar",
-                value = 5.83f,
-                unit = NutrientUnit.GRAM,
+                nutrient = mockHealthyRecipes.first().fiber,
                 isSubNutrient = true
             )
         }

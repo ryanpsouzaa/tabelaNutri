@@ -25,4 +25,17 @@
     <string name="carboidratos">Carboidratos</string>
     <string name="proteinas">Proteínas</string>
     <string name="gorduras">Gorduras</string>
+    <string name="fibra_alimentar">Fibra Alimentar</string>
+    <string name="gorduras_totais">Gorduras Totais</string>
+    <string name="gorduras_saturadas">Gorduras Saturadas</string>
+    <string name="gorduras_trans">Gorduras Trans</string>
+    <string name="colesterol">Colesterol</string>
+    <string name="sodio">Sódio</string>
+    <string name="potassio">Potássio</string>
+    <string name="calcio">Cálcio</string>
+    <string name="ferro">Ferro</string>
+    <string name="magnesio">Magnésio</string>
+    <string name="vitamina_c">Vitamina C</string>
+    <string name="vitamina_d">Vitamina D</string>
+    <string name="vitamina_b6">Vitamina B6</string>
 </resources>

@@ -5,12 +5,25 @@ import java.util.UUID
 
 data class HealthyRecipe(
     val id: UUID = UUID.randomUUID(),
-    val title: String,
+    val name: String,
     @DrawableRes val imageRes: Int,
-    val calories: Float,
-    val proteins: Float,
-    val carbohydrates: Float,
-    val totalPortion: Int,
-    val sugar: Float,
-    val fat: Float
+    val calories: HealthyRecipeNutrient,
+    val proteins: HealthyRecipeNutrient,
+    val carbohydrates: HealthyRecipeNutrient,
+    val fiber: HealthyRecipeNutrient,
+    val sugar: HealthyRecipeNutrient,
+    val totalFat: HealthyRecipeNutrient,
+    val fat: HealthyRecipeNutrient,
+    val saturatedFat: HealthyRecipeNutrient,
+    val transFat: HealthyRecipeNutrient,
+    val cholesterol: HealthyRecipeNutrient,
+    val sodium: HealthyRecipeNutrient,
+    val potassium: HealthyRecipeNutrient,
+    val calcium: HealthyRecipeNutrient,
+    val iron: HealthyRecipeNutrient,
+    val magnesium: HealthyRecipeNutrient,
+    val vitaminC: HealthyRecipeNutrient,
+    val vitaminD: HealthyRecipeNutrient,
+    val vitaminB6: HealthyRecipeNutrient,
+    val totalPortionInGrams: Int
 )

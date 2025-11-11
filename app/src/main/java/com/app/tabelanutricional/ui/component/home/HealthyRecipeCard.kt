@@ -1,7 +1,9 @@
 package com.app.tabelanutricional.ui.component.home
 
+import android.service.autofill.OnClickAction
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -27,6 +29,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.app.tabelanutricional.R
 import com.app.tabelanutricional.model.HealthyRecipe
+import com.app.tabelanutricional.model.mock.mockHealthyRecipes
 import com.app.tabelanutricional.ui.theme.TabelaNutricionalTheme
 import com.app.tabelanutricional.ui.theme.TabelaNutricionalTheme.sizing
 import com.app.tabelanutricional.ui.theme.Typography
@@ -37,11 +40,14 @@ import java.util.UUID
 @Composable
 fun HealthyRecipeCard(
     modifier: Modifier = Modifier,
-    healthyRecipe: HealthyRecipe
+    healthyRecipe: HealthyRecipe,
+    onClick: (selectedHealthyRecipeId: String) -> Unit
 ) {
 
     Row(
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth().clickable{
+            onClick(healthyRecipe.id.toString())
+        },
 
     ) {
         Image(
@@ -66,21 +72,21 @@ fun HealthyRecipeCard(
             ){
                 Text(
                     modifier = Modifier.weight(1f),
-                    text = healthyRecipe.title,
+                    text = healthyRecipe.name,
                     overflow = TextOverflow.Ellipsis,
                     maxLines = 2,
                     style = Typography.headlineMedium,
                 )
                 Text(
                     modifier = Modifier,
-                    text = "${healthyRecipe.calories} kcal",
+                    text = "${healthyRecipe.calories.value} kcal",
                     style = Typography.bodyLarge
 
                 )
             }
             Text(
                 modifier = Modifier.fillMaxWidth(),
-                text = "${healthyRecipe.proteins}g proteínas, ${healthyRecipe.carbohydrates}g carboidratos",
+                text = "${healthyRecipe.proteins.value}g proteínas, ${healthyRecipe.carbohydrates.value}g carboidratos",
                 overflow = TextOverflow.Ellipsis,
                 maxLines = 2,
                 style = Typography.bodyLarge.copy(color = Color.Gray)
@@ -100,17 +106,8 @@ private fun HealthyRecipeCardPreview() {
             repeat(5){
                 HealthyRecipeCard(
                     modifier = Modifier.height(100.dp).width(400.dp),
-                    healthyRecipe = HealthyRecipe(
-                        title = "Salada variada",
-                        imageRes = R.drawable.img_assorted_salad,
-                        calories = 221.15f,
-                        proteins = 15.13f,
-                        carbohydrates = 18.40f,
-                        totalPortion = 240,
-                        sugar = 2.4f,
-                        fat = 2.4f
-
-                    )
+                    healthyRecipe = mockHealthyRecipes.first(),
+                    onClick = {}
                 )
             }
         }
